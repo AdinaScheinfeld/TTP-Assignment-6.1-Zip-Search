@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import ZipCard from './ZipCard';
+import './SearchBar.css'
 
 class SearchBar extends Component {
 
@@ -44,7 +45,10 @@ class SearchBar extends Component {
             // display a header section with a title, search bar, and button
             <div className='container'>
                 <div className='searchArea'>
-                    <h3>Zip Code Search</h3>
+                    <div className='searchBarBack'>
+                        <h3>Zip Code Search</h3>
+                    </div>
+
                     <p>Zip code: </p>
                     <input 
                         className='searchBar' 

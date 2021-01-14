@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './ZipCard.css'
 
 class ZipCard extends Component {
 
@@ -25,13 +26,18 @@ class ZipCard extends Component {
 
         return (
             <div className='container'>
-                <h4>{locationText}</h4>
-                <ul>
-                    <li>State: {stateName}</li>
-                    <li>Location: ({lat}, {long})</li>
-                    <li>Population (estimated): {estimatedPopulation}</li>
-                    <li>Total Wages: {totalWages}</li>
-                </ul>
+                <div className='aZipCard'>
+                    <h4 className='locationHeader'>{locationText}</h4>
+                    <div className='listContainer'>
+                        <ul>
+                            <li>State: {stateName}</li>
+                            <li>Location: ({lat}, {long})</li>
+                            <li>Population (estimated): {estimatedPopulation}</li>
+                            <li>Total Wages: {totalWages}</li>
+                        </ul>    
+                    </div>            
+                </div>
+
             </div>
         )
     }
