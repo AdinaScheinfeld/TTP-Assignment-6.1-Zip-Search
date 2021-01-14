@@ -37,8 +37,10 @@ class SearchBar extends Component {
         });
     }
     
+    // render SearchBar component
     render() {
         return (
+
             // display a header section with a title, search bar, and button
             <div className='container'>
                 <div className='searchArea'>
@@ -48,7 +50,7 @@ class SearchBar extends Component {
                         className='searchBar' 
                         type='text' 
                         value={this.state.zip} 
-                        placeHolder='Please enter a zip code'
+                        placeholder='Please enter a zip code'
                         onChange={this.changeZip}
                     ></input>
                     <button 
