@@ -14,19 +14,15 @@ class SearchBar extends Component {
             zip: "",
             zipFound: false,
         };
-
-        //bind methods to this
-        this.changeZip = this.changeZip.bind(this);
-        this.getZipInfo = this.getZipInfo.bind(this);
     }
 
     // Change state of the zip when the user enters a new zip
-    changeZip(event) {
+    changeZip = (event) => {
         this.setState({zip: event.target.value});
     }
 
     // Get data about a zip using axios
-    getZipInfo() {
+    getZipInfo = () => {
         axios.get(`http://ctp-zip-api.herokuapp.com/zip/${this.state.zip}`)
         .then(response => {
             console.log(response.data);
